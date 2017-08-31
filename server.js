@@ -2,6 +2,13 @@ const express = require('express')
 const app = express()
 const port = 4000
 
+// const bodyParser = require('body-parser')
+//
+//   app.use(bodyParser.json())
+
+
+const routes = require('./routes')
+
 app.get('/authors/:_id', (req, res) => {
   res.send(404, 'an author')
 })
