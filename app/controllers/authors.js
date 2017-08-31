@@ -2,10 +2,12 @@ const mongoose = require('mongoose')
 const Author = mongoose.model('Author')
 
 module.exports = {
-  load: function (req, res, next, id) {
-    Author.findOne({_id: id})
+  load: function (req, res, next, _id) {
+    console.log(_id)
+    Author.findOne({_id: _id})
     .then(author => {
       req.author = author
+      console.log(author)
       if (!req.author) {
         return next(new Error('Author not found'))
       }

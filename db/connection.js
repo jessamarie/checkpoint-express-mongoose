@@ -6,8 +6,8 @@ mongoose.Promise = global.Promise
 require('../app/models/author.js')
 
 module.exports = {
-  mongoose: mongoose,
-  connect: connect
+  mongoose,
+  connect
 }
 
 function connect () {

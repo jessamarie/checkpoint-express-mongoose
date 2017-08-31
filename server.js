@@ -1,34 +1,34 @@
-const express = require('express')
-const app = express()
-const port = 4000
-
-// const bodyParser = require('body-parser')
+// const express = require('express')
+// const app = express()
+// const port = 4000
 //
-//   app.use(bodyParser.json())
-
-
-const routes = require('./routes')
-
-app.get('/authors/:_id', (req, res) => {
-  res.send(404, 'an author')
-})
-
-app.get('/authors', (req, res) => {
-  console.log('creating')
-})
-
-// def destroy
-//   @author = Author.find(params[:id])
-//   @author.destroy
+// // const bodyParser = require('body-parser')
+// //
+// //   app.use(bodyParser.json())
 //
-//   redirect_to "/authors"
-// end
-
-app.get('/findAuthorByName/:name', (req, res) => {
-  var author = Author.find({name: req.params.name})
-  res.send(author)
-})
-
-app.start(port, () => {
-  console.log(`Listening on port ${port}`)
-})
+//
+// const routes = require('./routes')
+//
+// app.get('/authors/:_id', (req, res) => {
+//   res.send(404, 'an author')
+// })
+//
+// app.get('/authors', (req, res) => {
+//   console.log('creating')
+// })
+//
+// // def destroy
+// //   @author = Author.find(params[:id])
+// //   @author.destroy
+// //
+// //   redirect_to "/authors"
+// // end
+//
+// app.get('/findAuthorByName/:name', (req, res) => {
+//   var author = Author.find({name: req.params.name})
+//   res.send(author)
+// })
+//
+// app.start(port, () => {
+//   console.log(`Listening on port ${port}`)
+// })

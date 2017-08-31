@@ -1,6 +1,5 @@
 const express = require('express')
-const connection = require('./db/connection')
-console.log(connection);
+const {connect} = require('./db/connection')
 const port = process.env.PORT || 4000
 const app = express()
 
@@ -10,7 +9,7 @@ module.exports = app
 require('./routes')(app)
 require('./express')(app)
 
-cconnect()
+connect()
   .then(db => {
     db.on('error', console.log)
     listen()

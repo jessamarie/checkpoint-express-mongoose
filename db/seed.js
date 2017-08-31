@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connect = require('./connection')
+const { connect } = require('./connection')
 const authorSeeds = require('./seedAuthors')
 var db = 'mongodb://localhost/authors'
 
